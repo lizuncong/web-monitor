@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web monitor sdk</title>
+</head>
+<body>
+    <div id="root">
+        <div class="content">
+            <input
+                id="errorBtn"
+                type="button"
+                value="点击抛出"
+                onclick="errorClick()"
+            >
+            <input
+                type="button"
+                class="promiseBtn"
+                value="点击抛出Promise错误"
+                onclick="promiseErrorClick()"
+            >
+        </div>
+    </div>
+    <script>
+        function errorClick() {
+            // throw Error('test')
+            window.productInfo.name = 'KFC'
+        }
+        function promiseErrorClick(){
+          new Promise((resolve, reject) => {
+            // reject('promise reject')
+            window.productInfo.name = 'KFC'
+          }).then(res => {
+            conosle.log('promise..success', res)
+          })
+        }
+    </script>
+    <script src="notExistJs.js"></script>
+</body>
+
+
+</html>
