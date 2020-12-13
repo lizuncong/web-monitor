@@ -1,8 +1,9 @@
 import userAgent from 'user-agent';
 
+export const logServerPrefix = 'logs'
 class SendTracker{
   constructor(){
-    this.url = 'http://localhost:8003/post';
+    this.url = `http://localhost:8003/${logServerPrefix}/post`;
     this.xhr = new XMLHttpRequest;
   }
 

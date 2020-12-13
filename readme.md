@@ -78,3 +78,26 @@
         "selector": "HTML BODY #container .content INPUT", // 选择器
       }
     ```
+    + 接口异常数据结构设计
+    ```js
+      let info = {
+        "title": "前端监控系统", // 页面标题
+        "url": "http://localhost:8080", // 页面url
+        "timestamp": "1212121212121212", // 访问时间戳
+        "userAgent": "chrome", // 用户浏览器类型
+        "kind": "stability", // 大类
+        "type": "xhr", // 小类
+        "eventType": "load", // 事件类型
+        "pathname": "/success",  
+        "status": "200-0k", 
+        "duration": "5", // 持续时间
+        "response": "hahah", // 响应内容  
+        "params": "参数", // 参数
+      }
+    ```
+    + 白屏
+    ```js
+      let info = {
+  
+      }
+    ```    

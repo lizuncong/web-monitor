@@ -20,6 +20,18 @@
                 value="点击抛出Promise错误"
                 onclick="promiseErrorClick()"
             >
+            <input
+                id="xhrSuccessBtn"
+                type="button"
+                value="ajax成功请求"
+                onclick="sendSuccess()"
+            >
+            <input
+                id="xhrErrorBtn"
+                type="button"
+                value="ajax失败请求"
+                onclick="sendError()"
+            >
         </div>
     </div>
     <script>
@@ -34,6 +46,29 @@
           }).then(res => {
             conosle.log('promise..success', res)
           })
+        }
+
+        function sendSuccess(){
+          let xhr = new XMLHttpRequest;
+          xhr.open('GET', '/success', true);
+          xhr.responseType = 'json';
+          xhr.onload = function(){
+            console.log('success..btn...click..onload', xhr.response)
+          }
+          xhr.send();
+        }
+
+        function sendError(){
+          let xhr = new XMLHttpRequest;
+          xhr.open('POST', '/error', true);
+          xhr.responseType = 'json';
+          xhr.onload = function(){
+            console.log('error..btn..click..onload', xhr.response)
+          }
+          xhr.onerror = function(err){
+            console.log('error...btn...click..onerror...', err)
+          }
+          xhr.send("name=sendError");
         }
     </script>
     <script src="notExistJs.js"></script>
