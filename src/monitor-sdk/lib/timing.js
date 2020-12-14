@@ -1,6 +1,7 @@
 import tracker from '../utils/tracker';
 import onload from '../utils/onload';
 
+// 统计各阶段耗时
 export function timing() {
   onload(function(){
     setTimeout(() => {
@@ -14,22 +15,8 @@ export function timing() {
         domLoading,
         domainLookupEnd,
         domainLookupStart,
-        embedPlayer,
         fetchStart,
-        firstscreenfinish,
-        loadEventEnd,
         loadEventStart,
-        navigationStart,
-        perfBackdrop,
-        perfPDTPEnd,
-        perfPETPEnd,
-        perfPFCPEnd,
-        perfPFDPEnd,
-        perfPLCPEnd,
-        playerStage0,
-        playerStage1,
-        playerStage3,
-        playerStage4,
         redirectEnd,
         redirectStart,
         requestStart,
