@@ -71,6 +71,11 @@
           }
           xhr.send("name=sendError");
         }
+
+        document.addEventListener('DOMContentLoaded', function(){
+          let start = Date.now();
+          while(Date.now() - start < 2000){}
+        })
     </script>
     <script src="notExistJs.js"></script>
 </body>

@@ -28,7 +28,6 @@ export function blankScreen() {
       isWrapper(xElements[0])
       isWrapper(yElements[0])
     }
-    debugger
     // 大于16就认为白屏
     if(emptyPoints > 16){
       let centerElements = document.elementsFromPoint(window.innerWidth / 2, window.innerHeight / 2)
