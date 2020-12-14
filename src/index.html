@@ -36,6 +36,7 @@
         </div>
     </div>
     <script>
+        let contentEl = document.getElementsByClassName('content')[0]
         function errorClick() {
             // throw Error('test')
             window.productInfo.name = 'KFC'
@@ -76,6 +77,13 @@
           let start = Date.now();
           while(Date.now() - start < 2000){}
         })
+
+        setTimeout(() => {
+          let h1 = document.createElement('h1')
+          h1.innerHTML = '我是页面中最有意义的内容'
+          h1.setAttribute('elementtiming', 'meaningful')
+          contentEl.appendChild(h1)
+        }, 2000)
     </script>
     <script src="notExistJs.js"></script>
 </body>
