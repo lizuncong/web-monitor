@@ -140,8 +140,22 @@
       }
     ```
     + 白屏
+    `screen` 返回当前window的screen对象，返回当前渲染窗口中和屏幕有关的属性          
+    `innerWidth` 只读的window属性。innerWidth返回以像素为单位的窗口的内部宽度        
+    `innerHeight` 窗口的内部高度(布局视口)的高度          
+    `layout_viewport`        
+    `elementsFromPoint`方法可以获取到当前视口内指定坐标处，由里到外排列的所有元素。
     ```js
       let info = {
-  
+        title: '前端监控系统',
+        url: 'http://localhost:8080/',
+        timestamp: '1239404040404044',
+        userAgent: 'chorme',
+        kind: 'stability',
+        type: 'blank',
+        emptyPoints: "0", // 空白点
+        screen: "2049 * 1152", // 分辨率
+        viewPoint: "2048 * 994", // 视口
+        selector: "HTML BODY #container", // 选择器
       }
     ```    

@@ -5,7 +5,7 @@ export default function injectXHR(){
 
   let oldOpen = XMLHttpRequest.prototype.open;
   XMLHttpRequest.prototype.open = function(method, url, async){
-    if(url.indexOf(logServerPrefix) === -1){
+    if(url.indexOf(logServerPrefix) === -1 && url.indexOf('sockjs') === -1){
       this.logData = { method, url, async }
     }
     return oldOpen.apply(this, arguments)
